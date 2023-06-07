@@ -1,0 +1,49 @@
+name: VaultGiveaways
+version: '1.0.0'
+main: net.themasterkitty.vaultgiveaways.VaultGiveaways
+api-version: 1.19
+depend: [Vault]
+commands:
+  giveawaymoney:
+    description: Creates a giveaway with an amount of money specified in the configuration or more.
+    aliases:
+      - createmoneygiveaway
+    permission: vaultgiveaways.moneygiveaways
+    permission-message: You do not have permission to giveaway money.
+  giveawayitem:
+    description: Creates an item giveaway for the item you are holding within the whitelist / not in the blacklist specified in the configuration.
+    aliases:
+      - createitemgiveaway
+    permission: vaultgiveaways.itemgiveaways
+    permission-message: You do not have permission to give away items.
+  entergiveaway:
+    description: Enter a player's giveaway of an item or money.
+    permission: vaultgiveaways.entergiveaway
+    permission-message: You do not have permission to enter a giveaway.
+  cancelgiveaway:
+    description: Cancel your giveaway of an item or money.
+    permission: vaultgiveaways.cancelgiveaway
+    permission-message: You do not have permission to cancel a giveaway.
+  vaultgiveaways:
+    description: Information command about the plugin.
+    aliases:
+      - giveaways
+    permission: vaultgiveaways.info
+    permission-message: You do not have permission to use this command.
+  reloadvaultgiveaways:
+    description: Reloads the giveaway plugin.
+    permission: vaultgiveaways.cancelgiveaway
+    permission-message: You do not have permission to use this command.
+permissions:
+  vaultgiveaways.moneygiveaways:
+    description: Giveaway access for money.
+  vaultgiveaways.itemgiveaways:
+    description: Giveaway access for items.
+  vaultgiveaways.entergiveaway:
+    description: Access to enter a giveaway.
+  vaultgiveaways.cancelgiveaway:
+    description: Access to cancel a giveaway.
+  vaultgiveaways.info:
+    description: Access to view the information of the plugin.
+  vaultgiveaways.reload:
+    description: Access to reload the plugin.
